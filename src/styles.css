@@ -85,7 +85,7 @@ img {
 .weather-app {
   border: 4px solid #c9356c;
   padding: 25px;
-  margin: 20px auto;
+  margin: 10px auto;
   max-width: 700px;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -132,4 +132,11 @@ a {
 .temperatureWhole {
   position: relative;
   right: -25px;
+}
+.author {
+  display: block;
+  margin: 0 auto;
+  margin-left: 240px;
+  font-size: 10px;
+  padding-top: 0;
 }

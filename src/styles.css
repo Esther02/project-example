@@ -1,5 +1,5 @@
 body {
-  padding: 20px;
+  padding: 10px;
   display: block;
   margin: 0 auto;
   font-family: "Press Start 2P", cursive;
@@ -17,6 +17,7 @@ h1 {
   margin-left: 25px;
   color: #c9356c;
   padding-top: 20px;
+  margin-bottom: 0px;
 }
 
 input[type="submit"] {
@@ -59,14 +60,12 @@ input[type="text"] {
 }
 
 .weekdays {
-  padding: 8px;
   color: #c9356c;
 }
 .city {
   padding: 10px;
-  font-size: 15px;
+  font-size: 27px;
   color: #c9356c;
-  font-size: 20px;
   padding: 10px;
 }
 .imagesweather {
@@ -79,7 +78,7 @@ img {
 .weather {
   width: 80px;
   border-radius: 50%;
-  margin-top: 10px;
+  margin-top: 2px;
 }
 .weather-app {
   border: 4px solid #c9356c;
@@ -94,6 +93,8 @@ img {
   padding-top: 20px;
   text-align: center;
   margin-bottom: 0px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
 }
 .units {
   font-size: 18px;
@@ -107,14 +108,22 @@ img {
 }
 .wind {
   text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+}
+.humidity {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
 }
 ul {
   list-style: none;
   display: block;
-  font-size: 15px;
-  margin-top: 25px;
+  font-size: 20px;
+  margin-top: 15px;
   padding: 0;
   text-align: center;
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 5px;
 }
 
 a {
@@ -122,8 +131,9 @@ a {
   color: cornflowerblue;
 }
 .penguin {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
+  margin-bottom: 10px;
 }
 .temperatureWhole {
   position: relative;
@@ -132,14 +142,29 @@ a {
 .author {
   display: block;
   margin: 0 auto;
-  margin-left: 270px;
+  margin-left: 280px;
   font-size: 10px;
   padding-top: 0;
   max-width: 700px;
 }
 .bottom-info {
   text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
 }
 .temperatures {
   font-size: 12px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+.description {
+  text-transform: capitalize;
+}
+.active {
+  color: #c9356c;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
 }

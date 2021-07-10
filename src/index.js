@@ -19,7 +19,10 @@ dateTime.innerHTML = `${day}  ${hours}:${minutes}`;
 //Show weather characteristics
 function showWeatherNow(response) {
   let weatherSpan = document.querySelector("#temperatureNow");
-  let temperature = Math.round(response.data.main.temp);
+
+  celsiusTemperature = response.data.main.temp;
+
+  let temperature = Math.round(celsiusTemperature);
   weatherSpan.innerHTML = temperature;
   if (temperature > 15) {
     let greeting = document.querySelector("#message");
@@ -48,6 +51,12 @@ function showWeatherNow(response) {
   let descriptionElement = document.querySelector("#description-weather");
   let weatherName = response.data.weather[0].description;
   descriptionElement.innerHTML = weatherName;
+  //Top icon
+  let iconElement = document.querySelector("#top-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function singUp(event) {
@@ -63,6 +72,32 @@ function singUp(event) {
 }
 let form = document.querySelector("#form-search");
 form.addEventListener("submit", singUp);
+
+//Temperature - Celsius or Fahrenheit
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperatureNow");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperatureNow");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 //Current position
 function handlePosition(position) {

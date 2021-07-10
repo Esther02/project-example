@@ -20,6 +20,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Itim&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
@@ -33,13 +39,13 @@
           <h1  class="col-5">
             <span class="temperatureWhole" id="temperatureNow">17</span>
                 <span class="units">
-                  <a id="celsius-link" href="#">°C</a>|
+                  <a id="celsius-link" class= "active" href="#">°C</a>|
                   <a class="unitF" id="fahrenheit-link" href="#">°F</a>
                 </span>
         <ul >
             <li id="date-time">Sat 19:26</li>
-            <li id="current-city" class="city">Madrid</li>
-            <li id="description-weather" class="description">partially cloudy</li><img class="weather" src="images/cloudy.PNG" />
+            <li id="current-city" class="city"><strong>Madrid</strong></li>
+            <li id="description-weather" class="description">partially cloudy</li><img class="weather" id="top-icon" alt="" src="" />
         </ul>
         </h1>
           
@@ -51,7 +57,7 @@
           </span>
         </br>
           <div class="row">
-              <div class="col-6 precipitation">Humidity:<span id="current-humidity">23</span>%</div>
+              <div class="col-6 humidity">Humidity: <span id="current-humidity">23</span>%</div>
               <div class="col-6 wind">Wind: <span id="current-wind">2</span>km/h</div>
             </div>
           
@@ -94,7 +100,7 @@
     </div>
 </div>
 </div>
-<div class= "author"><small><a href="https://github.com/Esther02/project-weather-app" target=_blank>Open source code</a>, by Esther Carminatti</small></div>
+<div class= "author"><small><a href="https://github.com/Esther02/project-weather-app" target=_blank>Open source code</a>, by Esther Carminatti👩‍💻</small></div>
 
 <script type="text/javascript" src="src/index.js"></script>
   </body>

@@ -69,8 +69,11 @@ input[type="text"] {
   padding: 10px;
 }
 .imagesweather {
-  width: 630px;
+  width: 680px;
   margin: 8px;
+  position: relative;
+  margin-left: -20px;
+  padding: 0;
 }
 img {
   border-radius: 40%;
@@ -78,7 +81,6 @@ img {
 .weather {
   width: 80px;
   border-radius: 50%;
-  margin-top: 2px;
 }
 .weather-app {
   border: 4px solid #c9356c;

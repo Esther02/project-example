@@ -53,10 +53,8 @@ function showWeatherNow(response) {
   descriptionElement.innerHTML = weatherName;
   //Top icon
   let iconElement = document.querySelector("#top-icon");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  let icon = response.data.weather[0].icon;
+  iconElement.setAttribute("src", `images/${icon}.svg`);
 }
 
 function singUp(event) {

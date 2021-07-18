@@ -73,9 +73,14 @@ img {
   border-radius: 40%;
 }
 .weather {
+  width: 150px;
+  border-radius: 50%;
+  margin: -28px;
+}
+.imagesweather {
   width: 100px;
   border-radius: 50%;
-  margin: -10px;
+  margin: -15px;
 }
 .weather-app {
   border: 4px solid #c9356c;

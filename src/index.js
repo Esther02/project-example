@@ -39,7 +39,7 @@ function displayForecast(response) {
         forecastHTML +
         `<div class="col-2">
   <div class="weekdays">${formatDay(forecastDay.dt)}</div>
-          <img id="images-bottom" class="imagesweather" src= "http://openweathermap.org/img/wn/${icon}@2x.png"  alt="" />
+          <img id="images-bottom" class="imagesweather" src= "images/${icon}.svg"  alt="" />
         <div class="temperatures">${Math.round(forecastDay.temp.day)}°</div>
     </div>`;
     }
@@ -48,7 +48,7 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-// Function for botton row forecast
+// Function for bottom row forecast
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "c34aa44e18e48aaa2ad40e6619e01c0c";

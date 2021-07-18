@@ -16,6 +16,26 @@ let day = days[now.getDay()];
 
 dateTime.innerHTML = `${day}  ${hours}:${minutes}`;
 
+//Bottom row forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+  <div class="weekdays">${day}</div>
+          <img class="imagesweather" src="images/04d.svg"  />
+        <div class="temperatures">30°C</div>
+    </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //Show weather characteristics
 function showWeatherNow(response) {
   let weatherSpan = document.querySelector("#temperatureNow");
@@ -90,6 +110,8 @@ function showCelsiusTemperature(event) {
 }
 
 let celsiusTemperature = null;
+
+displayForecast();
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);

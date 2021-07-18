@@ -35,6 +35,12 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+// Function for botton row forecast
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "c34aa44e18e48aaa2ad40e6619e01c0c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&appid=${apiKey}`;
+}
 
 //Show weather characteristics
 function showWeatherNow(response) {
@@ -75,6 +81,8 @@ function showWeatherNow(response) {
   let iconElement = document.querySelector("#top-icon");
   let icon = response.data.weather[0].icon;
   iconElement.setAttribute("src", `images/${icon}.svg`);
+  //New function for the bottom forecast
+  getForecast(response.data.coord);
 }
 
 function singUp(event) {

@@ -17,7 +17,8 @@ let day = days[now.getDay()];
 dateTime.innerHTML = `${day}  ${hours}:${minutes}`;
 
 //Bottom row forecast
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
@@ -39,7 +40,8 @@ function displayForecast() {
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "c34aa44e18e48aaa2ad40e6619e01c0c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 //Show weather characteristics
@@ -118,8 +120,6 @@ function showCelsiusTemperature(event) {
 }
 
 let celsiusTemperature = null;
-
-displayForecast();
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);

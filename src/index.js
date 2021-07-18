@@ -155,3 +155,5 @@ function currentLocation(event) {
 
 let button = document.querySelector("#current-button");
 button.addEventListener("click", currentLocation);
+
+

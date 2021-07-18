@@ -99,6 +99,7 @@ function showWeatherNow(response) {
   getForecast(response.data.coord);
 }
 
+//Activated when typed result
 function singUp(event) {
   event.preventDefault();
   let input = document.querySelector("#form-input");
@@ -156,4 +157,12 @@ function currentLocation(event) {
 let button = document.querySelector("#current-button");
 button.addEventListener("click", currentLocation);
 
+//Current result
+function search(city) {
+  let apiKey = `c34aa44e18e48aaa2ad40e6619e01c0c`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeatherNow);
+  form.reset();
+}
 
+search("Madrid");

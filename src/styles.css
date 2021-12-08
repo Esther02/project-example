@@ -78,7 +78,7 @@ img {
   margin: -28px;
 }
 .imagesweather {
-  width: 100px;
+  height: 100%;
   border-radius: 50%;
   margin: -15px;
 }
@@ -90,6 +90,7 @@ img {
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   background-color: #fae7e7;
+  padding-bottom: 35px;
 }
 .greeting {
   padding-top: 18px;
@@ -133,7 +134,7 @@ a {
   color: cornflowerblue;
 }
 .penguin {
-  width: 220px;
+  width: 70%;
   height: 220px;
   margin-bottom: 10px;
 }
@@ -144,7 +145,7 @@ a {
 .author {
   display: block;
   margin: 0 auto;
-  margin-left: 290px;
+  text-align: center;
   font-size: 10px;
   padding-top: 0;
   max-width: 700px;
@@ -168,4 +169,41 @@ a {
 }
 .active:hover {
   text-decoration: none;
+}
+#form-search {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 20px;
+}
+#form-input {
+  width: 50%;
+}
+.humidity-wind {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .temperatureWhole {
+    font-size: 32px;
+  }
+  .units {
+    font-size: 15px;
+  }
+  #form-search {
+    font-size: 13px;
+  }
+  .penguin {
+    height: 180px;
+  }
+  .button-container input {
+    font-size: 12px !important;
+  }
+  #current-button {
+    font-size: 12px !important;
+  }
 }

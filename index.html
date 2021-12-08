@@ -51,15 +51,18 @@
               <img id= "penguin-image" class="col-4 penguin" src="images/penguin2.gif"/>
             </span>
             </br>
-            <div class="row">
-              <div class="col-6 humidity">Humidity: <span id="current-humidity">23</span>%</div>
-              <div class="col-6 wind">Wind: <span id="current-wind">2</span>km/h</div>
+            <div class="humidity-wind">
+              <span class="humidity">Humidity: <span id="current-humidity">23</span>%</span>
+              <span class="wind">Wind: <span id="current-wind">2</span>km/h</span>
             </div>
           </div>
-          <div class="row">
+          <div class="row form-container">
             <form id="form-search">
-              <input id= "form-input" class="col-7" type="text" placeholder="Enter a city" />
-              <input type="submit" value="Search" /> <button id="current-button">Current</button>
+              <input id= "form-input" type="text" placeholder="Enter a city" />
+              <span class="button-container">
+                <input type="submit" value="Search" />
+                <button id="current-button">Current</button>
+              </span>
             </form>
           </div>
           <div class= "bottom-info" id="forecast"></div>
